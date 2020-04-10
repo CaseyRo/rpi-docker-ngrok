@@ -1,9 +1,7 @@
 version: '2'
 services:
   ngrok:
-    image: keesromkes/ngrok:latest
-    ports:
-    - 4041:4040
+    image: keesromkes/rpi-ngrok:latest
     restart: always
     network_mode: host
     volumes:

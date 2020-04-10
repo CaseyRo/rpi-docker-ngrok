@@ -1,5 +1,5 @@
-FROM resin/armv7hf-debian
-MAINTAINER keesromkes
+FROM balenalib/armv7hf-debian
+LABEL maintainer="Kees Romkes <k.romkes@gmail.com>"
 
 RUN apt-get update && apt-get install -y \
     unzip \
