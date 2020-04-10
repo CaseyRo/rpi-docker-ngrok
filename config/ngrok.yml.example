@@ -1,0 +1,9 @@
+authtoken: YOURAUTHTOKEN
+web_addr: 192.168.1.1:4040 #sets your webaddress, useful incase you run this on a network and don't want just local access
+tunnels:
+  nginx:
+    addr: 80
+    bind_tls: false #set to true if you also want https
+    proto: http
+    auth: "user:password"
+    subdomain: wtdibnodered
