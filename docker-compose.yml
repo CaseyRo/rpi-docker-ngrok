@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ngrok:
+    image: keesromkes/ngrok:latest
+    ports:
+    - 4041:4040
+    restart: always
+    network_mode: host
+    volumes:
+      - ./config/:/app/config/

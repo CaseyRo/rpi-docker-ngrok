@@ -1,0 +1,37 @@
+authtoken: 1Qjc5wO90OCO4WsTLyYZUi9Iui1_5kpav5N792nzs51CzPGMP
+web_addr: 192.168.86.224:4040
+tunnels:
+  nodered:
+    addr: 1880
+    bind_tls: false
+    proto: http
+    auth: "keesromkes:wtdib"
+    subdomain: wtdibnodered
+  web:
+    addr: 80
+    bind_tls: false
+    proto: http
+    auth: "keesromkes:amstel"
+    subdomain: wtdibpi
+  rpi:
+    addr: 22
+    bind_tls: false
+    proto: tcp
+  dev:
+    addr: 192.168.86.222:80
+    bind_tls: false
+    proto: http
+    auth: "keesromkes:wtdib"
+    subdomain: wtdibdev
+  sonarqube:
+    addr: 192.168.86.222:9000
+    bind_tls: false
+    proto: http
+    subdomain: wtdibdevsq
+    remote_addr: 9000
+  nodered_ha:
+    addr: 1881
+    bind_tls: false
+    proto: http
+    auth: "keesromkes:FWDtLUVpiJGc2&THUtMbnanu"
+    subdomain: krnodered
