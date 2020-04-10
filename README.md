@@ -20,6 +20,7 @@ _this was tested on a RPi4 with 2 GB on Docker_
 
 1. Make sure you create a config, example has been added to ```/config/ngrok.yml.example```
 2. Start the docker with the docker compose available ```docker-compose up -d``` or ```docker run keesromkes/rpi-ngrok:latest```
+3. Access the 'inspect mode' through port 4040 on your ([local?](http://127.0.0.1:4040)) running pi.
 
 I didn't do any crazy stuff or made it extra sexy, it just uses your config file to setup your tunnels. [You can read NGROK's documentation about that here](https://ngrok.com/docs#config-location).
 
