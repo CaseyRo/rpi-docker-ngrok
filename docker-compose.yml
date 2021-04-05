@@ -1,8 +1,13 @@
-version: '2'
+version: "3.9"
+
 services:
-  ngrok:
-    image: keesromkes/rpi-ngrok:latest
-    restart: always
-    network_mode: host
+  ngrok2:
+    image: 127.0.0.1:5000/ngrok:latest
     volumes:
-      - ./config/:/app/config/
+      - /mnt/ngrok2/config/:/app/config/
+    deploy:
+      mode: replicated
+      replicas: 2
+      placement:
+        constraints: [node.role != manager]
+        max_replicas_per_node: 1
