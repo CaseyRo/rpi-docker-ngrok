@@ -1,5 +1,5 @@
 FROM balenalib/armv7hf-debian
-LABEL maintainer="Kees Romkes <k.romkes@gmail.com>"
+LABEL maintainer="Casey Romkes <casey.berlin@hey.com>"
 
 RUN apt-get update && apt-get install -y \
     unzip \
@@ -12,7 +12,7 @@ WORKDIR /root
 ADD https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip ngrok.zip
 
 RUN unzip ngrok.zip -d /bin \
- && rm -f ngrok.zip \
- && touch .ngrok
+    && rm -f ngrok.zip \
+    && touch .ngrok
 
 CMD /bin/ngrok start --all -config /app/config/ngrok.yml -log stdout
