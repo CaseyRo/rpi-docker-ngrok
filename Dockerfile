@@ -1,11 +1,15 @@
-FROM balenalib/armv7hf-debian
+FROM lsiobase/alpine:arm32v7-3.12
+
 LABEL maintainer="Casey Romkes <casey.berlin@hey.com>"
 
-RUN apt-get update && apt-get install -y \
-    unzip \
-    net-tools \
-    --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk update && apk upgrade && \
+    apk add --no-cache unzip
+
+# RUN apt-get update && apt-get install -y \
+#     unzip \
+#     net-tools \
+#     --no-install-recommends && \
+#     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /root
 
